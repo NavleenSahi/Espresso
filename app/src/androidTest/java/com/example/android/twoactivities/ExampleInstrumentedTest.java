@@ -18,11 +18,14 @@ package com.example.android.twoactivities;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static junit.framework.Assert.fail;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -32,6 +35,20 @@ import static org.junit.Assert.assertEquals;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
+
+    @Rule
+    public ActivityTestRule activityRule = new ActivityTestRule<>(MainActivity.class);
+
+    @Test
+    public void testGoingToNextPage() {
+
+    }
+
+    @Test
+    public void testInputBoz() {
+        fail("This test case is not implemented yet!");
+    }
+
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
